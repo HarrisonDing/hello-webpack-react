@@ -1,6 +1,5 @@
 import React from 'react'
 import {LifeCycle} from './LifeCycle'
-require("../css/weui.css")
 
 export class Container  extends React.Component {
     constructor(props) {
