@@ -1,4 +1,6 @@
 import css from "./app.css"
+import {Container} from "./components/Container"
+
 console.log("hello world! 123 abcd");
 
 import React from 'react';
@@ -8,4 +10,9 @@ import Root from './Root';
 ReactDOM.render(
   <Root></Root>,
   document.getElementById('root')
+);
+
+ReactDOM.render(
+  <Container> </Container>,
+  document.getElementById('container')
 );
