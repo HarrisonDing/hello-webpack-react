@@ -3,38 +3,42 @@ import React from 'react';
 export class LifeCycle extends React.Component {
     constructor(props) {
         super(props);
-        alert("Initial render");
-        alert("constructor");
+        console.log("Initial render");
+        console.log("constructor");
         this.state = {str: "hello"};
     }
 
     componentWillMount() {
-        alert("componentWillMount");
+        console.log("componentWillMount");
     }
 
     componentDidMount() {
-        alert("componentDidMount");
+        console.log("componentDidMount");
+        console.log("!!!!! ======== $$$$$$");
+        console.log('');
     }
 
     componentWillReceiveProps(nextProps) {
-        alert("componentWillReceiveProps");
+        console.log("componentWillReceiveProps");
     }
 
     shouldComponentUpdate() {
-        alert("shouldComponentUpdate");
+        console.log("shouldComponentUpdate");
         return true;        // 记得要返回true
     }
 
     componentWillUpdate() {
-        alert("componentWillUpdate");
+        console.log("componentWillUpdate");
     }
 
     componentDidUpdate() {
-        alert("componentDidUpdate");
+        console.log("componentDidUpdate");
+        console.log("!!!!! ======== $$$$$$");
+        console.log('');
     }
 
     componentWillUnmount() {
-        alert("componentWillUnmount");
+        console.log("componentWillUnmount");
     }
 
     setTheState() {
@@ -52,7 +56,7 @@ export class LifeCycle extends React.Component {
     }
 
     render() {
-        alert("render");
+        console.log("render");
         return(
             <div>
                 <span>{"Props:"}<h2>{parseInt(this.props.num)}</h2></span>
