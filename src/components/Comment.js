@@ -12,6 +12,7 @@ export class Comment extends React.Component {
 
     handleSelect(event) {
         this.setState({selectName: this.state.names[event.target.value]});
+        console.log("value: " + event.target.value + ", selectName: " + this.state.selectName);
     }
 
     /** 
