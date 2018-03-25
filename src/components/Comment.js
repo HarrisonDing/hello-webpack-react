@@ -5,18 +5,25 @@ export class Comment extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            names: ['Tim', 'John', 'Hank']
+            names: ['Tim', 'John', 'Hank'],
+            selectName: ''
         };
     }
 
-    /*
+    handleSelect(event) {
+        this.setState({selectName: this.state.names[event.target.value]});
+    }
+
+    /** 
     // It seems browser cannot get state in this function, raising 
-        'names' is null exception
+     //   'names' is null exception
+     // https://codeday.me/bug/20170903/67397.html
      getInitialState() {
         return {
-            names: ['Time', 'John', 'Hank']
+            names: ['Time', 'John', 'Hank', 'Jack']
         };
-    } */
+    } 
+    */
 
     render() {
         let options = [];
@@ -24,16 +31,13 @@ export class Comment extends React.Component {
             options.push(<option value={opt} key={opt}>{this.state.names[opt]}</option>)
         };
 
-        for(let it in options) {
-            //console.log("it: " + it + ", item: " + JSON.stringify(options[it]));
-            console.dir(options[it]);
-        }
+        console.dir(options);
 
         return <div>
-            <select>
+            <select onChange={this.handleSelect.bind(this)}>
                 {options}
             </select>
-            <Content></Content>
+            <Content selectName={this.state.selectName}></Content>
             </div>;
     }
 }
