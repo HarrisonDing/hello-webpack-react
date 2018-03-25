@@ -1,5 +1,7 @@
 import css from "./app.css"
 import {Container} from "./components/Container"
+import {Comment} from './components/Comment'
+
 
 console.log("hello world! 123 abcd");
 
@@ -16,3 +18,7 @@ ReactDOM.render(
   <Container> </Container>,
   document.getElementById('container')
 );
+
+ReactDOM.render(
+  <Comment></Comment>, document.getElementById('comment')
+)

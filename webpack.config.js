@@ -26,13 +26,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Your App',
+            title: 'React-Webpack',
             template: './src/template.html',
             minify: {
                 collapseWhitespace: false
             },
             hash: true
        }),
-       new ExtractTextPlugin("styles.css")
+       new ExtractTextPlugin("styles.css"),
+       new ExtractTextPlugin("weui.css")
     ]
 }
